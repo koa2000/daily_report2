@@ -1,0 +1,23 @@
+/ = form_for @entry do |f|
+/  -if @entry.errors.any?
+/    #error_explanation
+/     %h2= "#{pluralize(@entry.errors.count, "error")} prohibited this entry from being saved:"
+/     %ul
+/        - @entry.errors.full_messages.each do |msg|
+/          %li= msg
+/
+/  .field
+/    = f.label :title
+/    = f.text_field :title
+/  .field
+/    = f.label :content
+/    = f.text_area :content
+/  .actions
+/   = f.submit 'Save'
+
+= twitter_bootstrap_form_for @entry do |entry|
+  = entry.text_field :title, 'タイトル'
+  = entry.text_area :content, '内容', placeholder: '140字程度'
+  = entry.date_select :reserved_at, '公開予約日'
+  = entry.password_field :password, '削除用パスワード'
+  = entry.submit 'Save'

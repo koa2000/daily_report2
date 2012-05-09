@@ -1,0 +1,35 @@
+%h1 Listing users
+
+%table.table
+  %tr
+    %th Year
+    %th Month
+    %th Day
+    %th Week
+    %th Start
+    %th End
+    %th Break time
+    %th Work time
+    %th Issues
+    %th
+    %th
+    %th
+
+  - @users.each do |user|
+    %tr
+      %td= user.year
+      %td= user.month
+      %td= user.day
+      %td= user.week
+      %td= user.start
+      %td= user.end
+      %td= user.break_time
+      %td= user.work_time
+      %td= user.issues
+      %td= link_to 'Show', user
+      %td= link_to 'Edit', edit_user_path(user)
+      %td= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New User', new_user_path

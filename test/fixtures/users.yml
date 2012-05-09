@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  year: 1
+  month: 1
+  day: 1
+  week: MyString
+  start: 1
+  end: 1
+  break_time: 1
+  work_time: 1
+  issues: MyString
+
+two:
+  year: 1
+  month: 1
+  day: 1
+  week: MyString
+  start: 1
+  end: 1
+  break_time: 1
+  work_time: 1
+  issues: MyString

@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Year:
+  = @user.year
+%p
+  %b Month:
+  = @user.month
+%p
+  %b Day:
+  = @user.day
+%p
+  %b Week:
+  = @user.week
+%p
+  %b Start:
+  = @user.start
+%p
+  %b End:
+  = @user.end
+%p
+  %b Break time:
+  = @user.break_time
+%p
+  %b Work time:
+  = @user.work_time
+%p
+  %b Issues:
+  = @user.issues
+
+= link_to 'Edit', edit_user_path(@user)
+\|
+= link_to 'Back', users_path
